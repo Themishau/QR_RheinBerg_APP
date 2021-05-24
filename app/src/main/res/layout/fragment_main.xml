@@ -20,14 +20,4 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="48dp"
-        android:text="TEST"
-        app:layout_constraintStart_toStartOf="@+id/section_label"
-        app:layout_constraintTop_toTopOf="@+id/section_label" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

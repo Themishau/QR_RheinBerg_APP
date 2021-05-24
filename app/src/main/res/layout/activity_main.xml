@@ -6,13 +6,29 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:foregroundTint="#000000"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appBarLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.QR_RheinBerg_APP.AppBarOverlay">
+
+        <ImageButton
+            android:id="@+id/QR_CodeScan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:drawable/ic_menu_camera"
+            android:backgroundTint="@color/design_default_color_on_secondary"
+            android:foregroundGravity="fill_horizontal"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintBottom_toTopOf="@+id/tabs"
+            app:layout_constraintEnd_toStartOf="@+id/title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@android:drawable/ic_menu_camera" />
 
         <TextView
             android:id="@+id/title"
@@ -23,28 +39,27 @@
             android:text="@string/app_name"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
             android:textColorLink="#130000"
-            android:textSize="14sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tabs"
             app:layout_constraintEnd_toStartOf="@+id/login_button"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/QR_CodeScan"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
             android:id="@+id/login_button"
-            android:layout_width="67dp"
-            android:layout_height="59dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:background="@drawable/ic_baseline_person_pin_24"
             android:backgroundTint="@color/design_default_color_on_secondary"
             android:foregroundGravity="fill_horizontal"
             android:src="@drawable/ic_baseline_person_24"
             app:layout_constraintBottom_toTopOf="@+id/tabs"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/title"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:src="@drawable/ic_baseline_person_24" />
 
         <com.google.android.material.tabs.TabLayout

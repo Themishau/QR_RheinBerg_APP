@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.example.qr_rheinberg_app.data.LoginRepository
-import com.example.qr_rheinberg_app.data.Result
+import com.example.qr_rheinberg_app.ui.data.LoginRepository
+import com.example.qr_rheinberg_app.ui.data.Result
 
 import com.example.qr_rheinberg_app.R
 

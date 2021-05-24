@@ -2,8 +2,8 @@ package com.example.qr_rheinberg_app.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.qr_rheinberg_app.data.LoginDataSource
-import com.example.qr_rheinberg_app.data.LoginRepository
+import com.example.qr_rheinberg_app.ui.data.LoginDataSource
+import com.example.qr_rheinberg_app.ui.data.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
