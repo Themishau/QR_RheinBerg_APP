@@ -82,9 +82,11 @@ class QR_CodeScan_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Toast.makeText(this, "Scan started", Toast.LENGTH_SHORT).show()
         setupPermissions()
         binding = ActivityQrCodeScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
 
@@ -102,7 +104,8 @@ class QR_CodeScan_Activity : AppCompatActivity() {
         // Callbacks
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
-                Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_SHORT).show()
+                binding.tvTextView.text = it.text
             }
         }
         codeScanner.errorCallback = ErrorCallback { // or ErrorCallback.SUPPRESS
