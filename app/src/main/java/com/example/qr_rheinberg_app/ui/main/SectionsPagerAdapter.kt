@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.qr_rheinberg_app.R
+import com.example.qr_rheinberg_app.ui.main.fragments.*
 
 private const val QR_Code = "QR_Code"
 private const val RheinBergAuslastung = "RheinBergAuslastung"
@@ -24,9 +25,9 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         if (position == 0) {
             return QR_CodeScan.newInstance(position + 1)
         } else if (position == 1) {
-            return BIItemFragment.newInstance(position + 1)
+            return PieChartFrag.newInstance()
         } else if (position == 2) {
-            return RheinBergAuslastungFragment.newInstance(RheinBergAuslastung, RheinBergAuslastung)
+            return BarChartFrag.newInstance()
 
         } else
             return PlaceholderFragment.newInstance(position + 1)

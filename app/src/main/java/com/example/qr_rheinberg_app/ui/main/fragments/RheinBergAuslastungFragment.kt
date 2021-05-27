@@ -1,4 +1,4 @@
-package com.example.qr_rheinberg_app.ui.main
+package com.example.qr_rheinberg_app.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
